@@ -1,0 +1,51 @@
+[
+  {
+    "inputs": [
+      {"internalType":"address","name":"wallet","type":"address"},
+      {"internalType":"bytes32","name":"modelId","type":"bytes32"},
+      {"internalType":"uint16","name":"version","type":"uint16"},
+      {"internalType":"uint16","name":"score","type":"uint16"},
+      {"internalType":"uint16","name":"confidence","type":"uint16"},
+      {"internalType":"uint16","name":"concentration","type":"uint16"},
+      {"internalType":"uint16","name":"stable","type":"uint16"},
+      {"internalType":"uint16","name":"activity","type":"uint16"},
+      {"internalType":"string","name":"tag","type":"string"}
+    ],
+    "name":"attestOpen",
+    "outputs":[],
+    "stateMutability":"payable",
+    "type":"function"
+  },
+  {
+    "inputs":[
+      {"internalType":"address","name":"wallet","type":"address"},
+      {"internalType":"bytes32","name":"modelId","type":"bytes32"}
+    ],
+    "name":"get",
+    "outputs":[{
+      "components":[
+        {"internalType":"uint16","name":"score","type":"uint16"},
+        {"internalType":"uint16","name":"confidence","type":"uint16"},
+        {"internalType":"uint16","name":"version","type":"uint16"},
+        {"internalType":"uint64","name":"updatedAt","type":"uint64"},
+        {"internalType":"address","name":"attestor","type":"address"},
+        {"internalType":"bytes32","name":"modelId","type":"bytes32"},
+        {
+          "components":[
+            {"internalType":"uint16","name":"concentration","type":"uint16"},
+            {"internalType":"uint16","name":"stable","type":"uint16"},
+            {"internalType":"uint16","name":"activity","type":"uint16"}
+          ],
+          "internalType":"struct RiskRegistry.Features",
+          "name":"f","type":"tuple"
+        },
+        {"internalType":"string","name":"tag","type":"string"}
+      ],
+      "internalType":"struct RiskRegistry.Record",
+      "name":"",
+      "type":"tuple"
+    }],
+    "stateMutability":"view",
+    "type":"function"
+  }
+]
